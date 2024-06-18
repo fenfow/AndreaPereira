@@ -1,0 +1,424 @@
+/* General */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    /*Removes the horizontal and vertical margins*/
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    /* Set the background color to black */
+    background-color: #000000;  /*0d0d0d*/ 
+    /* Set the default text to white*/
+    color: #ffffff;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* Transition */
+a,
+.btn{
+    transition: all 300ms ease;
+}
+ 
+nav,
+.nav-links{
+    display: flex; 
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: #b10000;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: #b10000;
+}
+
+.name {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .name:hover {
+    cursor: default;
+  }
+
+
+.container{display: inline-block;}
+
+.logo{
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 3px;
+    border-right: 2px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(17),
+        cursor .4s step-end infinite alternate;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+@keyframes cursor{
+    50%{border-color: #b10000}
+}
+
+@keyframes typing{
+    from{width: 0}
+}
+
+.highlight {
+    color: #b10000; /* Set the color to red */
+}
+
+/* Sections*/
+ section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin:0 10rem;
+    box-sizing: border-box;
+    min-width: fit-content;
+ }
+
+ .section-container{
+    display: flex;
+}
+
+/* Profile Section */
+
+#home{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section_pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section_text{
+    align-self: center;
+    text-align: center;
+}
+
+.section_text p{
+    font-weight: 600;
+}
+
+.section_text_p1{
+    text-align: center;
+    color: #ffffff;
+}
+
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Icons */
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+/* Buttons */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 15rem;
+}
+
+.btn-color-1,
+.btn-color-2{
+    border: #b10000 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover{
+    cursor: pointer;
+}
+
+.btn-color-1:hover,
+.btn-color-2{
+    background: #ffffff;
+    color:white;
+}
+
+.btn-color-1,
+.btn-color-2:hover{
+    background: #b10000;
+    color:white;
+}
+
+.btn-color-1:hover{
+    background: #b10000;
+}
+
+.btn-color-2{
+    background: none;
+}
+
+.btn-color-2:hover{
+    border:  #b10000 0.1rem solid;
+}
+
+/* About Section */
+
+#about {
+    position: relative;
+}
+
+.title {
+    font-size: 3rem;
+    color: #b10000;
+}
+
+.section-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    width: 100%;
+}
+
+.about-details-container {
+    display: flex;
+    gap: 2rem; 
+    justify-content: flex-start; 
+    margin-bottom: 2rem; 
+    width: 100%; 
+}
+
+.text-container {
+    text-align: left;
+    width: 100%; 
+}
+
+.text-modification {
+    color: #ffffff;
+}
+
+.programing-language-list li{
+    list-style: none;
+}
+
+.programing-language-list li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.programing-language-list li:before{
+    content: "\25B8";
+    color: #b10000;
+    margin-right: 20px;
+}
+
+.programing-language-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0rem;
+    list-style: none; 
+}
+
+.section_pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container{
+    padding: 1rem;
+    flex: 1;
+    background: rgb(0, 0, 0);
+    border-radius: 2rem;
+    border: #b10000 0.1rem solid;
+    border-color: #b10000;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+/* Projects */
+
+.progress-bar-container{
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+.progress-wrapper{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.progress{
+    width: 0%;
+    background-color: #b10000;
+    border-radius: 5px;
+    height: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.progress span{
+    position: relative;
+    font-weight: 800;
+    top: 13px;
+    left: 25px;
+}
+
+/* Contact */
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: #ffffff 0.1rem solid;
+    border-color: #ffffff;
+    background: #000000;
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+}
+
+.email.icon{
+    height: 2.5rem;
+}
+
+/* Footer */
+footer{
+    height: 26vh;
+    margin: 0.1rem;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* style.css */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  

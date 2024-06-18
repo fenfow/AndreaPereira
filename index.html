@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navigation system -->
+    <nav id="desktop-nav">
+        <div class="name">Andrea Pereira</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="home">
+        <div class="section_text">
+            <div class="container">
+                <div class="logo">Hello, <span class="highlight">Andrea</span> here.</div>
+            </div>
+            <p class="section_text_p1">Computer Engineering Student</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/AndreaPereira_Resume.pdf')">Download Resume</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/Linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/andrea-pereira-49522922b'"/>
+                <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/fenfow'"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <p class="section_text_p1">Get to Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section_pic-container">
+                <img src="./assets/profile-img.png" alt="Profile picture" class="about-pic"/>
+            </div>
+            <div class="about-content">
+                <div class="about-details-container">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon"/>
+                        <h3>Experience</h3>
+                        <p>3rd year Computer Engineering Student</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="Education icon" class="icon"/>
+                        <h3>Education</h3>
+                        <p>Pursuing a Bachelor's in Applied Sciences</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p class="text-modification">
+                        I am currently a 3rd year Computer Engineering student at Queen's University. 
+                        I have gained a solid foundation in software development, data science, and 
+                        digital systems through diverse coursework.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="text-modification">
+                        Here are some languages I have been working with:
+                    </p>
+                    <ul class="programing-language-list">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>Html</li>
+                        <li>CSS</li>
+                    </ul>
+                    <p class="text-modification">
+                        Outside of work and studies, I enjoy going to the gym, playing video games, 
+                        and taking care of my house plants.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <p class="section_text_p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="progress-bar-container">
+            <h1>Under Construction</h1>
+            <h3>Progress</h3>
+            <div class="progress-wrapper">
+                <div class="progress"><span>0%</</span></div>
+            </div>
+        </div>
+        <script>
+            const progress = document.querySelector('.progress');
+            const percentage = document.querySelector('.progress span');
+
+            let per = 0;
+            function progressLoad() {
+                if (per >= 75) {
+                    progress.style.width = `75%`;
+                    percentage.innerHTML = "75%";
+                } else {
+                    progress.style.width = `${per}%`;
+                    percentage.innerHTML = `${per}%`;
+                }
+                per++;
+            }
+            setInterval(progressLoad, 90);
+        </script>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <p class="section_text_p1">Say Hi</p>
+        <h1 class="title">Contact me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+                <p><a href="mailto:andreanicolepereira@gmail.com">Email</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/Linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+                <p><a href="https://www.linkedin.com/in/andrea-pereira-49522922b">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; Built and designed by Andrea Pereira. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
