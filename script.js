@@ -3,28 +3,26 @@ function toggleMenu() {
     menu.classList.toggle("open");
   }
 
-  // script.js
-
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section');
-  
-  const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-  };
+    const elements = document.querySelectorAll('section, nav, footer, .btn-container, .icon, .section_text_p1, .title, .progress-bar-container, .contact-info-container, .nav-links-container, .programing-language-list, .text-modification, .details-container');
 
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
-          }
-      });
-  }, options);
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-  sections.forEach(section => {
-      section.classList.add('hidden'); // Add hidden class initially
-      observer.observe(section);
-  });
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    elements.forEach(element => {
+        element.classList.add('hidden');
+        observer.observe(element);
+    });
 });
